@@ -15,6 +15,7 @@ This project simulates a real-world QA dashboard backend with filtering, reporti
 * SQLite
 * Pydantic (v2)
 * Pytest
+* Docker
 
 ---
 
@@ -29,6 +30,7 @@ This project simulates a real-world QA dashboard backend with filtering, reporti
 * ✅ Input validation using Pydantic
 * ✅ Timestamp tracking (UTC)
 * ✅ Unit testing with Pytest
+* ✅ Containerized application using Docker
 
 ---
 
@@ -45,6 +47,8 @@ test-dashboard-api/
 │── tests/
 │   └── test_api.py     # Unit tests
 │── requirements.txt
+│── Dockerfile
+│── .dockerignore
 │── README.md
 ```
 
@@ -84,6 +88,15 @@ http://127.0.0.1:8000/docs
 
 ---
 
+---
+
+## 🐳 Run with Docker
+
+### 1. Build Docker Image
+
+```bash
+docker build -t test-dashboard-api .
+
 ## 📌 API Endpoints
 
 | Method | Endpoint           | Description           |
@@ -120,21 +133,23 @@ pytest
 
 ## 🎯 Key Highlights
 
-*   Designed RESTful APIs with input validation using Pydantic
-*   Implemented full CRUD operations with proper error handling
-*   Structured project with separation of concerns (routes,     models, schemas)
-*   Built automated API tests using Pytest
-*   Integrated SQLAlchemy ORM for database interactions
-*   Developed a production-style backend structure
+* Designed and developed RESTful APIs using FastAPI
+* Implemented full CRUD operations with validation and error handling
+* Utilized Pydantic v2 for request validation and response modeling
+* Integrated SQLAlchemy ORM for database interactions
+* Developed automated API tests using Pytest
+* Containerized the application using Docker
+* Structured the application using a modular architecture (routes, models, schemas)
 
 ---
 
 ## 🚀 Future Improvements
 
-* Docker support
 * Authentication & authorization
 * Pagination
-* CI/CD pipeline
+* CI/CD pipeline (GitHub Actions)
+* PostgreSQL support
+* Cloud deployment (AWS/Azure)
 
 ---
 
